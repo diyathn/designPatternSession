@@ -1,20 +1,20 @@
 package com.zone24x7.matrix24x7;
 
-public class StandardBarcodeScanner {
+public class AlphaBarcodeScanner {
 
-    public static final String name = "Standard Barcode Decoder";
-    public static final String version = "sbs001";
+    public static final String name = "Alpha Barcode Scanner";
+    public static final String version = "abs001";
 
     public String getBarcodeVersion(){
         return version;
     }
 
     public void enableBarcodeScanner(){
-        System.out.println("Barcode scanner turned on!");
+        System.out.println( name + " turned on!");
     }
 
     public void disableBarcodeScanner(){
-        System.out.println("Barcode scanner turned off!");
+        System.out.println( name + " turned off!");
     }
 
     /**

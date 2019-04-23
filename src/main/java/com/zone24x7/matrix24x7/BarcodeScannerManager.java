@@ -7,10 +7,10 @@ public class BarcodeScannerManager {
      */
     public boolean restartBarcodeScanner() {
 
-        StandardBarcodeScanner standardBarcodeScanner = new StandardBarcodeScanner();
-        standardBarcodeScanner.disableBarcodeScanner();
-        standardBarcodeScanner.enableBarcodeScanner();
-        System.out.println(StandardBarcodeScanner.name + " has been restarted!");
+        AlphaBarcodeScanner alphaBarcodeScanner = new AlphaBarcodeScanner();
+        alphaBarcodeScanner.disableBarcodeScanner();
+        alphaBarcodeScanner.enableBarcodeScanner();
+        System.out.println(AlphaBarcodeScanner.name + " has been restarted!");
         return true;
     }
 }

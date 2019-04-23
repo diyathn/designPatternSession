@@ -11,8 +11,8 @@ public class BarcodeService {
     public String readBarcode(String epc) {
         String decodedEpc = null;
 
-        StandardBarcodeScanner standardBarcodeScanner = new StandardBarcodeScanner();
-        decodedEpc = standardBarcodeScanner.decode(epc);
+        AlphaBarcodeScanner alphaBarcodeScanner = new AlphaBarcodeScanner();
+        decodedEpc = alphaBarcodeScanner.decode(epc);
 
 
         System.out.println("Decoded EPC is: " + decodedEpc);
