@@ -1,4 +1,3 @@
-import com.zone24x7.matrix24x7.BarcodeController;
 import com.zone24x7.matrix24x7.StandardBarcodeScanner;
 import org.junit.Test;
 import static org.junit.Assert.*;

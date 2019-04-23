@@ -1,6 +1,6 @@
 package com.zone24x7.matrix24x7;
 
-public class BarcodeController {
+public class BarcodeService {
 
     /**
      * This will read the given epc from the given barcode type

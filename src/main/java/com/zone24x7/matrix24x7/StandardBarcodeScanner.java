@@ -2,8 +2,12 @@ package com.zone24x7.matrix24x7;
 
 public class StandardBarcodeScanner {
 
-    public static final String name = "Standard Barcode Scanner";
+    public static final String name = "Standard Barcode Decoder";
     public static final String version = "sbs001";
+
+    public String getBarcodeVersion(){
+        return version;
+    }
 
     public void enableBarcodeScanner(){
         System.out.println("Barcode scanner turned on!");
