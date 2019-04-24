@@ -1,5 +1,7 @@
 package com.zone24x7.matrix24x7;
 
+import javax.json.JsonObject;
+
 public class AlphaBarcodeScanner {
 
     public static final String name = "Alpha Barcode Scanner";
@@ -23,8 +25,8 @@ public class AlphaBarcodeScanner {
      * @param epc
      * @return Decoded epc
      */
-    public String decode(String epc){
-        char ch[]=epc.toCharArray();
+    public String decode(JsonObject epc){
+        char ch[]=epc.getString("EPC").toCharArray();
         String rev="";
         for(int i=ch.length-1;i>=0;i--){
             rev+=ch[i];

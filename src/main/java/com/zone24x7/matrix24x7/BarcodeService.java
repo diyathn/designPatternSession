@@ -1,5 +1,7 @@
 package com.zone24x7.matrix24x7;
 
+import javax.json.JsonObject;
+
 public class BarcodeService {
 
     /**
@@ -8,7 +10,7 @@ public class BarcodeService {
      * @param epc Scanned EPC
      * @return Decoded EPC value
      */
-    public String readBarcode(String epc) {
+    public String readBarcode(JsonObject epc) {
         String decodedEpc = null;
 
         AlphaBarcodeScanner alphaBarcodeScanner = new AlphaBarcodeScanner();
