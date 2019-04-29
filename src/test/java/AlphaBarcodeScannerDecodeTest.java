@@ -1,12 +1,13 @@
-import com.zone24x7.matrix24x7.AlphaBarcodeScanner;
+import com.zone24x7.matrix24x7.barcodescanner.AlphaBarcodeScanner;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
 
 public class AlphaBarcodeScannerDecodeTest {
     @Test
-    public void testReadBarcodeShouldGiveInvertedString(){
+    public void testDecodeShouldGiveInvertedString() {
         String epc = "abcd1234";
         AlphaBarcodeScanner alphaBarcodeScanner = new AlphaBarcodeScanner();
-        assertEquals("Decoded EPC should be 4321cba","4321dcba", alphaBarcodeScanner.decode(epc));
+        assertEquals("Decoded EPC should be 4321cba", "4321dcba", alphaBarcodeScanner.decode(epc));
     }
 }
