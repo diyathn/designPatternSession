@@ -9,21 +9,12 @@ import static org.junit.Assert.assertEquals;
 
 public class AlphaBarcodeScannerDecodeTest {
 
-    private static final String EPC = "EPC";
-
-    private JsonObject getSampleJsonPayload(String epc) {
-        JsonObjectBuilder jsonPayloadBuilder = Json.createObjectBuilder();
-        jsonPayloadBuilder.add(EPC, epc);
-
-        return jsonPayloadBuilder.build();
-    }
-
     @Test
     public void testReadBarcodeShouldGiveInvertedString() {
 
-        JsonObject samplePayload = getSampleJsonPayload("abcd1234");
+        String input = "abcd1234";
 
         AlphaBarcodeScanner alphaBarcodeScanner = new AlphaBarcodeScanner();
-        assertEquals("Decoded EPC should be 4321cba", "4321dcba", alphaBarcodeScanner.decode(samplePayload));
+        assertEquals("Decoded EPC should be 4321dcba", "4321dcba", alphaBarcodeScanner.decode(input));
     }
 }

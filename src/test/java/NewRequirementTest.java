@@ -30,14 +30,16 @@ public class NewRequirementTest {
         inputSet.add(getSampleJsonPayload("gamma", "abcd1234"));
 
         List<String> outputSet = new ArrayList<String>();
-        outputSet.add("abcd1234_alpha");
-        outputSet.add("abcd1234_beta");
-        outputSet.add("abcd1234_gamma");
+        outputSet.add("4321dcba");
+        outputSet.add("abcd1234_BETA");
+        outputSet.add("abcd1234_GAMMA");
         AlphaBarcodeScanner alphaBarcodeScanner = new AlphaBarcodeScanner();
         int count = 0;
         for (JsonObject jsonObject : inputSet) {
+            JsonObject currentInput = inputSet.get(count);
 
-            assertEquals("Decoded EPC should be 4321cba", outputSet.get(count), alphaBarcodeScanner.decode(inputSet.get(count)));
+            assertEquals("Decoded EPC should be 4321dcba", outputSet.get(count),
+                    alphaBarcodeScanner.decode(currentInput.getString(EPC)));
             count++;
         }
     }

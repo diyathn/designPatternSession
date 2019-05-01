@@ -7,11 +7,12 @@ public class BarcodeService {
     /**
      * This will read the given epc from the given barcode type
      *
-     * @param epc Scanned EPC
+     * @param payload Scanned EPC & Scanner type as JSON object
      * @return Decoded EPC value
      */
-    public String readBarcode(JsonObject epc) {
+    public String readBarcode(JsonObject payload) {
         String decodedEpc = null;
+        String epc = payload.getString("EPC");
 
         AlphaBarcodeScanner alphaBarcodeScanner = new AlphaBarcodeScanner();
         decodedEpc = alphaBarcodeScanner.decode(epc);

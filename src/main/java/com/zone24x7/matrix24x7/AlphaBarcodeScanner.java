@@ -25,8 +25,8 @@ public class AlphaBarcodeScanner {
      * @param epc
      * @return Decoded epc
      */
-    public String decode(JsonObject epc){
-        char ch[]=epc.getString("EPC").toCharArray();
+    public String decode(String epc){
+        char ch[]=epc.toCharArray();
         String rev="";
         for(int i=ch.length-1;i>=0;i--){
             rev+=ch[i];
